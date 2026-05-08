@@ -103,7 +103,7 @@ def main():
         # Split the data into training and testing sets
         train_data, test_data = train_test_split(final_df, test_size=test_size, random_state=42)
         
-        # Save the split datasets and create the raw folder if it doesn't exist
+        # Save the split datasets and create the raw folder if it doesn't exis
         save_data(train_data, test_data, data_path=os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../data'))
         
     except Exception as e:
