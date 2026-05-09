@@ -99,6 +99,15 @@ jobs:
          -e 'AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}' \
          -e 'AWS_REGION=${{ secrets.AWS_REGION }}' \
          ${{ steps.login-ecr.outputs.registry }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
+
       - name: Clean previous images and containers
         run: |
          docker system prune -f
+
+      - name: Free up disk space
+        run: |
+         docker system prune -f
+         docker image prune -a -f
+          
+      - name: Checkout
+        uses: actions/checkout@v3   
