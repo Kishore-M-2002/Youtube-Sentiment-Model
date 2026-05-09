@@ -112,3 +112,5 @@ export MLFLOW_TRACKING_URI=http://ec2-54-147-36-34.compute-1.amazonaws.com:5000/
 ```
 
 
+
+855374748937.dkr.ecr.us-east-1.amazonaws.com/mlproject
